@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             xmlns:punny="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:viewmodel="clr-namespace:Service_ticket.ViewModel"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Service_ticket.View.Main.HomeEdit">
+    <ContentPage.BindingContext>
+        <viewmodel:UserViewModel />
+
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <punny:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0.6">
+            <punny:PancakeView.BackgroundGradientStops>
+                <punny:GradientStopCollection>
+                    <punny:GradientStop Color="#292929" Offset="0.0"/>
+                    <punny:GradientStop Color="#353535" Offset="1.0" />
+
+                </punny:GradientStopCollection>
+
+
+            </punny:PancakeView.BackgroundGradientStops>
+
+
+
+            <StackLayout Spacing="7">
+
+                <Frame Padding="0" BackgroundColor="#FDD835" WidthRequest="150" HeightRequest="130" Margin="18,17" CornerRadius="110" HorizontalOptions="CenterAndExpand" >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" />
+
+                    </Frame.GestureRecognizers>
+
+                    <Image BackgroundColor="#FDD835"  Aspect="AspectFit"  x:Name="ProfilePicture" />
+
+
+
+                </Frame>
+
+
+
+                <Frame Padding="0" BackgroundColor="#101010" HasShadow="True" HeightRequest="70" Margin="10" CornerRadius="8"  >
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="*" />
+
+                        </Grid.ColumnDefinitions>
+                        
+                        
+
+
+                        <Label Text="Name :" FontSize="23" TextColor="#FDD835" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <Entry BackgroundColor="#171717"  Grid.Column="1" x:Name="ENT_Name" />
+
+                        
+
+                    </Grid>
+
+                  
+
+                </Frame>
+
+                <Frame Padding="0" BackgroundColor="#101010" HasShadow="True"  Margin="10" CornerRadius="8"  >
+
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="20" />
+
+
+
+                        </Grid.RowDefinitions>
+
+
+
+
+                        <Label Text="Tell us about yourself :" Margin="0,6" FontSize="23" Grid.Row="0" TextColor="#FDD835" VerticalTextAlignment="Center" HorizontalOptions="Center" />
+                        <Editor BackgroundColor="#171717"  TextColor="#FDD835" Grid.Row="1"  x:Name="ENT_Bio" />
+                        <Label Grid.Row="2" HorizontalOptions="End" VerticalOptions="Center" >
+                            <Label.FormattedText>
+                                <FormattedString >
+                                    <Span BackgroundColor="Transparent"  x:Name="LB_wordCount" TextColor="Gray" FontSize="17" />
+                                    <Span BackgroundColor="Transparent" Text="/100 words" TextColor="Gray" FontSize="17" />
+           
+                                </FormattedString>
+                                
+                            </Label.FormattedText>
+                            
+                            
+                        </Label>
+
+
+                    </Grid>
+
+
+
+                </Frame>
+
+                <Frame Padding="2" BackgroundColor="#101010" WidthRequest="140" HorizontalOptions="End" HeightRequest="50" Margin="10" CornerRadius="8">
+
+                    <Button Text="Submit" x:Name="BTN_Submit" Clicked="BTN_Submit_Clicked" BackgroundColor="Transparent" TextColor="#FDD835" FontSize="20" />
+                    
+                    
+
+                </Frame>
+
+                
+
+
+
+
+
+            </StackLayout>
+
+        </punny:PancakeView>
+    </ContentPage.Content>
+</ContentPage>

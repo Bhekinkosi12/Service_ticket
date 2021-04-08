@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:punny="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Service_ticket.View.Main.Home.Home_PG">
+    <ContentPage.Content>
+        <punny:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0.6">
+            <punny:PancakeView.BackgroundGradientStops>
+                <punny:GradientStopCollection>
+                    <punny:GradientStop Color="#292929" Offset="0.0"/>
+                    <punny:GradientStop Color="#353535" Offset="1.0" />
+
+                </punny:GradientStopCollection>
+                
+                
+            </punny:PancakeView.BackgroundGradientStops>
+
+
+            <ScrollView>
+        <StackLayout>
+
+            <Frame Padding="0" BackgroundColor="Transparent"  >
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150" />
+                            <RowDefinition Height="Auto" />
+
+                        </Grid.RowDefinitions>
+
+                        <Frame Padding="0" Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" WidthRequest="150" Margin="6,6"  HeightRequest="150" CornerRadius="90" >
+
+                            <ImageButton BackgroundColor="#FDD835" x:Name="ProfilePic" />
+
+                        </Frame>
+
+                        <Frame Padding="0" Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent">
+
+                            <Label  x:Name="LB_name" TextColor="#FDD835" FontSize="25" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                        </Frame>
+
+                        <Frame Padding="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" BackgroundColor="Transparent" Margin="15,2">
+
+                            <Label Text="You can edit your bio after creating your account" x:Name="LB_Bio" TextColor="#FDD835" FontSize="20" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                        </Frame>
+
+
+
+
+
+
+                    </Grid>
+                
+                   
+
+            </Frame>
+
+                <Frame Padding="0" BackgroundColor="#101010" HasShadow="True" HeightRequest="70" Margin="10" CornerRadius="8"  >
+                        <Frame.GestureRecognizers>
+                            <ClickGestureRecognizer x:Name="Frame_edit" Clicked="Frame_edit_Clicked" />
+
+                        </Frame.GestureRecognizers>
+                    
+                    <Label Text="Edit Profiile" FontSize="23" TextColor="#FDD835" VerticalOptions="Center" HorizontalOptions="Center" />
+
+
+                </Frame>
+                <Frame Padding="0" BackgroundColor="#101010" HasShadow="True" HeightRequest="70" Margin="10" CornerRadius="8"  >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="Services_host" Tapped="Services_host_Tapped" NumberOfTapsRequired="1" />
+                          
+
+                        </Frame.GestureRecognizers>
+
+
+                    <Label Text="host Services" FontSize="23" TextColor="#FDD835" VerticalOptions="Center" HorizontalOptions="Center" />
+
+                    
+                    
+
+                </Frame>
+                <Frame Padding="0" BackgroundColor="#101010" HasShadow="True" HeightRequest="70" Margin="10" CornerRadius="8"  >
+
+
+                    <Label Text="Host a local services" FontSize="23" TextColor="#FDD835" VerticalOptions="Center" HorizontalOptions="Center" />
+
+
+                </Frame>
+
+
+
+            </StackLayout>
+            </ScrollView>
+        </punny:PancakeView>
+    </ContentPage.Content>
+</ContentPage>

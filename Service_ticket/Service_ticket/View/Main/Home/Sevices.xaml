@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:punny="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             
+             x:Class="Service_ticket.View.Main.Home.Sevices">
+    <ContentPage.Content>
+        <punny:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0.6">
+            <punny:PancakeView.BackgroundGradientStops>
+                <punny:GradientStopCollection>
+                    <punny:GradientStop Color="#292929" Offset="0.0"/>
+                    <punny:GradientStop Color="#353535" Offset="1.0" />
+
+                </punny:GradientStopCollection>
+
+
+            </punny:PancakeView.BackgroundGradientStops>
+
+            <StackLayout>
+
+            </StackLayout>
+
+        </punny:PancakeView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:Service_ticket.ViewModel"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="yellow.jpg"
+             x:Class="Service_ticket.View.Main.Services.Personal_Services">
+    <ContentPage.BindingContext>
+
+        <viewmodel:DataViewModel />
+    </ContentPage.BindingContext>
+
+    
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical">
+        <Frame Padding="0" BackgroundColor="Transparent" >
+        <ScrollView VerticalScrollBarVisibility="Never">
+        <StackLayout Orientation="Vertical">
+            <Frame Padding="0" BackgroundColor="#303030" Margin="15,8" HeightRequest="100" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Image Aspect="AspectFit" x:Name="ProfilePicture" Grid.Column="0" />
+                    <Label BackgroundColor="Transparent" Text="Name"  TextColor="White" Grid.Column="1" FontSize="24" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+
+
+                </Grid>
+                
+            </Frame>
+
+
+            <Frame Padding="0" BackgroundColor="Transparent" >
+
+                <Label Text="Type of Service" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            </Frame>
+
+            <Frame Padding="0" BackgroundColor="#303030" Margin="14,4" CornerRadius="8" >
+
+                <Label Text="The text to be displaed here is a discription of the services and how its serverd to people" TextColor="White" FontSize="20" Margin="10" />
+
+            </Frame>
+
+                <BoxView BackgroundColor="Black" CornerRadius="10" Margin="14,4" HeightRequest="4" />
+
+
+                <Frame Padding="0" BackgroundColor="Transparent" Margin="14,4" >
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="50" />
+
+                                </Grid.ColumnDefinitions>
+
+
+
+                                <Label Text="Products" TextColor="White" Grid.Column="0" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                                <ImageButton Grid.Column="1" BackgroundColor="#FDD835" x:Name="BTN_Edit"  CornerRadius="8" Clicked="BTN_Edit_Clicked" Source="penEdit.png" Aspect="AspectFit" />
+
+                            </Grid>
+
+                   
+                </Frame>
+
+
+
+                        <CollectionView x:Name="collectionLIST"  ItemsSource="{Binding DataPresent}">
+                    <CollectionView.ItemTemplate >
+                        <DataTemplate  >
+                            <Frame BackgroundColor="#303030" Padding="0" CornerRadius="8" Margin="14,8">
+                            <Grid BackgroundColor="Transparent" Margin="10" >
+
+                                <Grid.RowDefinitions  >
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="*" />
+
+                                </Grid.ColumnDefinitions>
+
+                                    <Image Aspect="AspectFit"  BackgroundColor="#000000" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" />
+
+
+                                            <Label Text="{Binding ProductName, Mode=TwoWay}" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0" />
+
+                                            <Label  Grid.Row="1" Grid.Column="1" >
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="R " TextColor="White" FontSize="20" />
+                                                        <Span Text="{Binding Price, Mode=TwoWay}" TextColor="White" FontSize="20" />
+                                                        <Span Text=" each" TextColor="White" FontSize="20" />
+
+                                                    </FormattedString>
+                                                    
+                                                </Label.FormattedText>
+                                                
+                                            </Label>
+                                
+
+
+
+
+
+
+
+                                </Grid>
+                            </Frame>
+                   
+                        </DataTemplate>
+                        
+                        
+                    </CollectionView.ItemTemplate>
+                    
+                    
+                </CollectionView>
+            
+            
+
+
+
+
+
+
+            </StackLayout>
+
+        </ScrollView>
+        </Frame>
+
+            
+            <Frame Padding="0" HeightRequest="140" BackgroundColor="#202020" VerticalOptions="End">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="150" />
+
+                    </Grid.ColumnDefinitions>
+
+
+
+
+                    <StackLayout Orientation="Horizontal" Grid.Column="0">
+
+                        <Frame Padding="0" BackgroundColor="Transparent" CornerRadius="8" Margin="8" >
+
+                        <Grid WidthRequest="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+
+                        </Grid.ColumnDefinitions>
+
+
+                        <Label BackgroundColor="Green" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" />
+
+                        <Label Text="13" TextColor="White" BackgroundColor="#202020" Grid.Column="1" Grid.Row="0" />
+
+
+
+
+                    </Grid>
+                        </Frame>
+                    </StackLayout>
+
+
+
+
+                    <Button Text="Order" FontSize="20" CornerRadius="10" Grid.Column="1" BackgroundColor="#FDD835" Margin="5" TextColor="#000000" />
+
+                 
+                    
+                    
+
+                </Grid>
+            </Frame>
+            </StackLayout>
+
+
+       
+    </ContentPage.Content>
+</ContentPage>

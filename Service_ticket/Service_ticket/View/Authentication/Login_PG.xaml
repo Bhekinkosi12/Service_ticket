@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="yellow.jpg"
+             xmlns:punny="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Service_ticket.View.Authentication.Login_PG">
+    <ContentPage.Resources>
+        <ResourceDictionary >
+            <Style TargetType="Label" x:Key="Lable_style">
+
+                <Setter Property="FontSize" Value="23" />
+                <Setter Property="WidthRequest" Value="140" />
+                <Setter Property="TextColor" Value="#FDD835" />
+                <Setter Property="Opacity" Value="1" />
+
+            </Style>
+
+            <Style TargetType="Entry" x:Key="Entry_style" >
+                <Setter Property="TextColor" Value="#FDD835" />
+                <Setter Property="BackgroundColor" Value="#404040" />
+
+                
+           
+            </Style>
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+
+        
+           
+
+          
+        <Frame Padding="0" Margin="30,70,30,30" CornerRadius="8"    BackgroundColor="Transparent" >
+
+            <ScrollView >
+            <StackLayout Orientation="Vertical" Spacing="10">
+
+                    
+
+                    <Frame Padding="0" BackgroundColor="Transparent" HeightRequest="150" Margin="0,12" >
+
+
+                    <Image Source="torch.png" Aspect="AspectFit" />
+
+
+                </Frame>
+
+
+                    <Frame Padding="10" BackgroundColor="#303030" CornerRadius="10" Margin="5,0" >
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+
+                            </Grid.RowDefinitions>
+                            
+
+                            <Label Text="Email : " Style="{StaticResource Lable_style}" Grid.Row="0"  Grid.Column="0" />
+
+                            <Entry Style="{StaticResource Entry_style}" x:Name="ENT_userName" Grid.Row="0" Grid.Column="1"   />
+
+
+                            <Label x:Name="Alerts_email" FontSize="20" TextColor="Red" Grid.ColumnSpan="2" Grid.Row="1"  IsVisible="False" />
+
+
+                        </Grid>
+                        
+                        
+                    </Frame>
+                
+                    <!-- Password -->
+
+                <Frame Padding="10" BackgroundColor="#303030" Margin="5,0">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Password : " Style="{StaticResource Lable_style}" Grid.Row="0" Grid.Column="0" />
+
+                            <Entry Style="{StaticResource Entry_style}" x:Name="ENT_password" Grid.Row="0"  IsPassword="True" Grid.Column="1"  />
+
+                            <Label x:Name="Alerts_password" FontSize="20" TextColor="Red" Grid.Row="1" Grid.ColumnSpan="2"  IsVisible="False" />
+
+
+
+                        </Grid>
+
+
+                    </Frame>
+                <Frame Padding="10" BackgroundColor="Transparent" Margin="5,0">
+
+
+                        <Grid>
+
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="100" />
+                                
+                            </Grid.ColumnDefinitions>
+
+
+                            <Button Text="Login" x:Name="BT_Login" Clicked="BT_Login_Clicked" TextColor="#FFD600" Grid.Column="0"  FontSize="20" FontAttributes="Bold" WidthRequest="120" BackgroundColor="#303030" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" />
+                            <Button Text="SignUp" x:Name="BT_sign_up" Grid.Column="1"  Clicked="BT_sign_up_Clicked" TextColor="#FFD600" BackgroundColor="#303030" CornerRadius="10" FontSize="17" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
+                        </Grid>
+                    </Frame>
+
+
+
+
+
+
+                <!-- Altinatives-->
+
+                    <BoxView BackgroundColor="#202020" HeightRequest="4" CornerRadius="4" />
+
+
+                <Frame Padding="10" BackgroundColor="#303030" Margin="5,0" HeightRequest="40">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                            <Image Source="google.png" Aspect="AspectFit" Grid.Column="0" />
+
+                            <Label Text="Continue with Google" Style="{StaticResource Lable_style}" Margin="5,0" Grid.Column="1" />
+                        
+
+                        
+
+
+                    </Grid>
+                    
+
+
+                </Frame>
+                
+
+            </StackLayout>
+            </ScrollView>
+       
+        </Frame>
+
+    </ContentPage.Content>
+</ContentPage>

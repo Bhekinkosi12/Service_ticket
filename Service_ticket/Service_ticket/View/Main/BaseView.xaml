@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            
+             BackgroundColor="#009688" BarTextColor="#FDD835" 
+               
+            
+            NavigationPage.HasNavigationBar="False"
+            xmlns:home="clr-namespace:Service_ticket.View.Main.Home"
+             BarBackground="#263238"
+            x:Class="Service_ticket.View.Main.BaseView">
+  <!--Pages can be added as references or inline-->
+    <NavigationPage Title="Home" BackgroundColor="#292929" BarBackgroundColor="#292929" >
+        <x:Arguments>
+            <home:Home_PG />
+
+        </x:Arguments>
+        
+    </NavigationPage>
+    <NavigationPage Title="Services" BarBackgroundColor="#292929" >
+        <x:Arguments>
+            <home:Sevices />
+
+        </x:Arguments>
+        
+    </NavigationPage>
+    <NavigationPage Title="About" BarBackgroundColor="#292929" />
+</TabbedPage>

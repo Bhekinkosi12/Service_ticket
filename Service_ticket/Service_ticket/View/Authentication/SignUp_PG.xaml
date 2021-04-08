@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="yellow.jpg"
+             x:Class="Service_ticket.View.Authentication.SignUp_PG">
+    <ContentPage.Resources>
+        <ResourceDictionary >
+            <Style TargetType="Label" x:Key="Lable_style">
+
+                <Setter Property="FontSize" Value="23" />
+                <Setter Property="WidthRequest" Value="140" />
+                <Setter Property="TextColor" Value="#FDD835" />
+                <Setter Property="Opacity" Value="1" />
+
+            </Style>
+
+            <Style TargetType="Entry" x:Key="Entry_style" >
+                <Setter Property="TextColor" Value="#FDD835" />
+                <Setter Property="BackgroundColor" Value="#404040" />
+
+            </Style>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+
+        <Frame Padding="0" Margin="30,70,30,30" CornerRadius="8"    BackgroundColor="Transparent" >
+
+            <ScrollView VerticalScrollBarVisibility="Never">
+                <StackLayout Orientation="Vertical" Spacing="10">
+
+
+
+                    <Frame Padding="0" BackgroundColor="Transparent" HeightRequest="100" Margin="0,10" >
+
+
+                        <Label Text="SignUp" TextColor="#FFD600" HorizontalOptions="Center" BackgroundColor="Transparent" FontAttributes="Bold" FontSize="45" />
+
+
+                    </Frame>
+
+
+                    <Frame Padding="10" BackgroundColor="#303030" CornerRadius="10" Margin="5,0" >
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition  />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label BackgroundColor="Transparent" x:Name="Alert_name"  IsVisible="False" Grid.Row="0" Grid.RowSpan="2" TextColor="Red" FontSize="16" Margin="10,0" />
+
+                            <Label Text="Name : " Style="{StaticResource Lable_style}" Grid.Column="0" Grid.Row="1" />
+
+                            <Entry x:Name="ENT_name" Style="{StaticResource Entry_style}" Grid.Column="1" Grid.Row="1"  />
+
+
+                        </Grid>
+
+
+                    </Frame>
+
+                    <!-- Password -->
+
+                    <Frame Padding="10" BackgroundColor="#303030" Margin="5,0">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition  />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label BackgroundColor="Transparent" x:Name="Alert_surname" IsVisible="False" Grid.Row="0" TextColor="Red" Grid.RowSpan="2" FontSize="16" Margin="10,0" />
+
+
+                            <Label Text="Surname : " Style="{StaticResource Lable_style}" Grid.Column="0" Grid.Row="1" />
+
+                            <Entry x:Name="ENT_surname" Style="{StaticResource Entry_style}"  Grid.Column="1" Grid.Row="1" />
+
+
+                        </Grid>
+                        
+
+
+                    </Frame>
+                    <Frame Padding="10" BackgroundColor="#303030" Margin="5,0">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition  />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Label BackgroundColor="Transparent" x:Name="Alert_phone" IsVisible="False" Grid.Row="0" Grid.RowSpan="2" TextColor="Red" FontSize="16" Margin="10,0" />
+
+
+
+                            <Label Text="Phone no : " Style="{StaticResource Lable_style}" Grid.Column="0" Grid.Row="1" />
+
+                            <Entry x:Name="ENT_phone" Style="{StaticResource Entry_style}"  Keyboard="Numeric" Grid.Row="1"  Grid.Column="1"  />
+
+
+                        </Grid>
+
+
+                    </Frame>
+
+
+                    <Frame Padding="10" BackgroundColor="#303030" Margin="5,0">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition  />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label BackgroundColor="Transparent" x:Name="Alert_email" IsVisible="False" Grid.Row="0" Grid.RowSpan="2" TextColor="Red" FontSize="16" Margin="10,0" />
+
+
+
+                            <Label Text="Email : " Style="{StaticResource Lable_style}" Grid.Column="0" Grid.Row="1" />
+
+                            <Entry x:Name="ENT_email" Style="{StaticResource Entry_style}"  Keyboard="Email" Grid.Row="1" Grid.Column="1"  />
+
+
+                        </Grid>
+
+
+                    </Frame>
+
+                    <Frame Padding="10" BackgroundColor="#303030" Margin="5,0">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition  />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label BackgroundColor="Transparent" x:Name="Alert_city" Grid.RowSpan="2" IsVisible="False" Grid.Row="1" TextColor="Red" FontSize="16" Margin="10,0" />
+
+
+
+                            <Label Text="City : " Style="{StaticResource Lable_style}" Grid.Column="0" Grid.Row="1" />
+
+                            <Entry x:Name="ENT_city" Style="{StaticResource Entry_style}"  Grid.Column="1"  Grid.Row="1" />
+
+
+                        </Grid>
+
+
+                    </Frame>
+
+
+                    <Frame Padding="10" BackgroundColor="#303030" Margin="5,0">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition  />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label BackgroundColor="Transparent" x:Name="Alert_password" Grid.RowSpan="2" IsVisible="False" Grid.Row="1" TextColor="Red" FontSize="16" Margin="10,0" />
+
+
+
+                            <Label Text="Password : " Style="{StaticResource Lable_style}" Grid.Column="0" Grid.Row="1" />
+
+                            <Entry x:Name="ENT_password" Style="{StaticResource Entry_style}"  Grid.Column="1"  Grid.Row="1" />
+
+
+                        </Grid>
+
+
+                    </Frame>
+
+                    <Frame Padding="10" BackgroundColor="#303030" Margin="5,0">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition  />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label BackgroundColor="Transparent" x:Name="Alert_passwordTwo" Grid.RowSpan="2" IsVisible="False" Grid.Row="1" TextColor="Red" FontSize="16" Margin="10,0" />
+
+
+
+                            <Label Text="Repeat Password : " Style="{StaticResource Lable_style}" Grid.Column="0" Grid.Row="1" />
+
+                            <Entry x:Name="ENT_passwordTwo" Style="{StaticResource Entry_style}"  Grid.Column="1"  Grid.Row="1" />
+
+
+                        </Grid>
+
+
+                    </Frame>
+
+
+
+                    <Frame Padding="10" BackgroundColor="Transparent" Margin="5,0">
+
+                        <Button Text="SignUp" Clicked="BTN_submit_Clicked" x:Name="BTN_submit" TextColor="#FFD600" FontSize="20" FontAttributes="Bold" WidthRequest="120" BackgroundColor="#303030" CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                    </Frame>
+
+
+
+
+
+
+                   
+
+                   
+
+
+                </StackLayout>
+            </ScrollView>
+
+        </Frame>
+
+    </ContentPage.Content>
+</ContentPage>

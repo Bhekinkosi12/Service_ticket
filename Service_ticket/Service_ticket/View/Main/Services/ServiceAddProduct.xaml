@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="yellow.jpg"
+             x:Class="Service_ticket.View.Main.Services.ServiceAddProduct">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+
+            <Frame BackgroundColor="#303030" Padding="0" HeightRequest="110"  >
+
+                <Label Text="Add Items" FontSize="37" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#FDD835" />
+
+            </Frame>
+
+            <Frame Padding="0" BorderColor="#FDD835" BackgroundColor="#303030" WidthRequest="150" HeightRequest="150" Margin="100,0" CornerRadius="100">
+
+               
+                
+            </Frame>
+            <Frame Padding="0" BackgroundColor="#303030">
+
+                <Grid HeightRequest="50">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Product :" TextColor="#FDD835" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Grid.Column="0" />
+
+                    <Entry Placeholder="Product name" PlaceholderColor="#FDD835" x:Name="ENT_Product" BackgroundColor="#202020" TextColor="#FDD835" Grid.Column="1" />
+
+                </Grid>
+
+            </Frame>
+            <Frame Padding="0" BackgroundColor="#303030">
+
+                <Grid HeightRequest="50">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Price :" TextColor="#FDD835" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Grid.Column="0" />
+
+                    <Entry Placeholder="Product price each" PlaceholderColor="#FDD835" x:Name="ENT_Price" Keyboard="Numeric" BackgroundColor="#202020" TextColor="#FDD835" Grid.Column="1" />
+
+
+
+                </Grid>
+
+            </Frame>
+
+
+
+
+            <Frame Padding="0" VerticalOptions="EndAndExpand" BorderColor="#FDD835" HorizontalOptions="CenterAndExpand" CornerRadius="10" BackgroundColor="#303030" WidthRequest="200" HeightRequest="50" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="BTN_add" Tapped="BTN_add_Tapped" />
+
+                </Frame.GestureRecognizers>
+                <Label Text=" Add " HorizontalOptions="Center" VerticalOptions="Center" TextColor="#FDD835" FontSize="25" />
+
+            </Frame>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
